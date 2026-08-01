@@ -1,0 +1,20 @@
+{
+  "title": "regex-cookbook",
+  "cols": 82,
+  "prompt": "? ",
+  "prompt_color": "y",
+  "blocks": [
+    {
+      "cmd": "match a semver",
+      "out": "<c>^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9</c>\n<c>a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z</c>\n<c>-]+(?:\\.[0-9a-zA-Z-]+)*))?$</c>\n<g>+ 1.0.0   1.0.0-alpha.1   2.3.4+build.5</g>\n<r>- 1.0   v1.0.0   01.0.0</r>"
+    },
+    {
+      "cmd": "match an ISO date",
+      "out": "<c>^\\d{4}-\\d{2}-\\d{2}[Tt ]\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?([Zz]|[+-]\\d{2}:\\d{2})$</c>\n<g>+ 2026-08-01T12:00:00Z   2026-08-01 12:00:00+05:30</g>\n<r>- 2026-08-01T12:00:00   2026-08-01   12:00:00Z</r>"
+    },
+    {
+      "cmd": "detect a committed AWS key",
+      "out": "<c>\\b(?:AKIA|ASIA)[0-9A-Z]{16}\\b</c>\n<g>+ AKIAIOSFODNN7EXAMPLE   key=ASIAIOSFODNN7EXAMPLE</g>\n<r>- AKIAIOSFODNN7   akiaiosfodnn7example   BKIAIOSFODNN7EXAMPLE</r>"
+    }
+  ]
+}

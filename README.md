@@ -1,6 +1,16 @@
 # regex-cookbook
 
-Copy-paste regex for the 44 things you actually need, with real test strings, the traps, and a test suite that proves every pattern still works.
+Copy-paste regex for the 44 things you actually need, each one proved by a real test suite.
+
+<p align="center">
+  <img src="assets/demo.gif" alt="regex-cookbook demo" width="780">
+</p>
+
+## Start here
+
+- [The patterns](#the-patterns), all 44 with matches, non-matches and the trap in each one.
+- [ReDoS: the warning you should actually read](#redos-the-warning-you-should-actually-read), before you ship a pattern that hangs on user input.
+- [Syntax cheat table](#syntax-cheat-table), for the token you half remember.
 
 Every other regex list gives you a pattern and no way to know whether it is right. This one ships `tests/test_patterns.py`, which asserts all 44 patterns against three matching and three non-matching strings each, so a broken entry fails CI instead of quietly breaking your validation. It also tells you where each pattern is a bad idea, because half of the regexes people copy (email, phone, credit card) should not be regexes at all.
 
